@@ -1,0 +1,21 @@
+.item-container {
+    margin: 5vmin auto;
+    width: 70%;
+    background-color: rgb(198, 197, 196);
+    padding: 1vmin 2vmin;
+    text-align: left;
+}
+
+.title-container {
+    display: flex;
+    
+}
+
+.title-container a {
+    color: black;
+}
+
+.info-container {
+    display: flex;
+    color: #f77b07;
+}

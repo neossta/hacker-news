@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React, {useEffect} from 'react'
 import './App.css';
+import { Story } from './components/Story/Story';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NewsPage from './components/NewsPage/NewsPage';
+import StoryPage from './components/StoryPage/StoryPage';
+
+
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="header-title">Hacker News</div>
       </header>
+      <div className='content'>
+      <Routes>
+        <Route path='/' element={<NewsPage />} exact={true} />
+        <Route path='/news/:id' element={<StoryPage/>} />
+      </Routes>
+      </div>
     </div>
-  );
+    </BrowserRouter>) 
 }
-
 export default App;
